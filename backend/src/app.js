@@ -1,5 +1,9 @@
 const express = require("express");
 const cors = require("cors");
+const rateLimit = require("express-rate-limit");
+const authRoutes = require("./routes/authRoutes");
+const tripRoutes = require("./routes/tripRoutes");
+const bookingRoutes = require("./routes/bookingRoutes");
 
 const app = express();
 
@@ -27,11 +31,23 @@ const authLimiter = rateLimit({
   },
 });
 
+const bookingLimiter = rateLimit({
+  windowMs: 1 * 60 * 1000,
+  max: 10,
+  message: {
+    success: false,
+    message: "Too many booking requests. Please wait a moment.",
+  },
+});
+
 app.use("/api", limiter);
 app.use("/api/auth", authLimiter);
+app.use("/api/bookings", bookingLimiter);
 
 
 app.use("/api/auth", authRoutes);
+app.use("/api/trips", tripRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 app.use((req, res) => {
   res.status(404).json({
