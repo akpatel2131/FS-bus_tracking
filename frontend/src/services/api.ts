@@ -14,7 +14,7 @@ import type {
   TripsListResponse,
 } from '../types';
 
-const BASE_URL = (import.meta.env.VITE_API_URL as string) || 'http://localhost:5000/api';
+const BASE_URL = 'https://fs-bus-tracking.onrender.com/api';
 
 // ─── Axios instance ───────────────────────────────────────────────────────────
 

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { BookingCard } from '../../components/BookingCard/BookingCard';
 import { useAuth } from '../../context/AuthContext';
 import { useTrips } from '../../context/TripContext';
-import { EmptyState, ErrorBox, PageHeader, Spinner } from '../../Tools/common';
+import { EmptyState, ErrorBox, PageHeader, Spinner } from '../../Tools/Common';
 import type { BookingStatus } from '../../types';
 import './MyBookingsPage.css';
 

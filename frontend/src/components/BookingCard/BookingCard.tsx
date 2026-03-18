@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import { StatusBadge } from '../../Tools/common';
+import { StatusBadge } from '../../Tools/Common';
 import type { Booking, Trip } from '../../types';
 import './BookingCard.css';
 
@@ -14,10 +14,8 @@ export function BookingCard({ booking, onCancel, cancellingId }: BookingCardProp
   const isCancelling = cancellingId === booking._id;
 
   // trip may be a populated object or just a string id
-  const tripName   = typeof trip === 'object' ? `${trip.source} → ${trip.destination}` : '—';
   const busName    = typeof trip === 'object' ? trip.busName : '—';
   const depTime    = typeof trip === 'object' ? format(new Date(trip.startTime), 'dd MMM yy, HH:mm') : '—';
-  const price      = typeof trip === 'object' ? trip.price : 0;
 
   const canCancel = booking.status === 'CONFIRMED' && onCancel;
 

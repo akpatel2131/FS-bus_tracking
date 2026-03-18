@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { TripCard } from '../../components/TripCard/TripCard';
 import { useAuth } from '../../context/AuthContext';
 import { useTrips } from '../../context/TripContext';
-import { EmptyState, ErrorBox, Spinner } from '../../Tools/common';
+import { EmptyState, ErrorBox, Spinner } from '../../Tools/Common';
 import './HomePage.css';
 
 export function HomePage() {

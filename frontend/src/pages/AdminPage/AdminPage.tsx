@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useTrips } from "../../context/TripContext";
-import { EmptyState, ErrorBox, PageHeader, Spinner } from "../../Tools/common";
+import { EmptyState, ErrorBox, PageHeader, Spinner } from "../../Tools/Common";
 import type { CreateTripPayload } from "../../types";
 import "./AdminPage.css";
 

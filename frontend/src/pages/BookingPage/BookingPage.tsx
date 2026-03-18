@@ -5,7 +5,7 @@ import { SeatMap } from '../../components/SeatMap/SeatMap';
 import { useAuth } from '../../context/AuthContext';
 import { useTrips } from '../../context/TripContext';
 import { usePolling } from '../../hooks/usePooling';
-import { ErrorBox, Spinner } from '../../Tools/common';
+import { ErrorBox, Spinner } from '../../Tools/Common';
 import type { Booking } from '../../types';
 import './BookingPage.css';
 
