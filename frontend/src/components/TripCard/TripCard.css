@@ -1,0 +1,171 @@
+.trip-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Route header */
+.trip-card__header {
+  padding: 20px 20px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.trip-card__route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.trip-card__city {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.trip-card__dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--clr-amber);
+  flex-shrink: 0;
+}
+
+.trip-card__dot--dest { background: var(--clr-teal); }
+
+.trip-card__city-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--clr-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trip-card__arrow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+  min-width: 30px;
+}
+
+.trip-card__line {
+  flex: 1;
+  height: 1px;
+  background: var(--clr-border);
+}
+
+.trip-card__arrow-icon {
+  color: var(--clr-amber);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Price */
+.trip-card__price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.trip-card__price-amount {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--clr-amber);
+  letter-spacing: -.03em;
+  line-height: 1;
+}
+
+.trip-card__price-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--clr-text-3);
+  letter-spacing: .04em;
+  margin-top: 2px;
+}
+
+/* Divider */
+.trip-card__divider { margin: 0 20px; }
+
+/* Details */
+.trip-card__details {
+  padding: 14px 20px 10px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.trip-card__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.trip-card__detail-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--clr-text-3);
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+
+.trip-card__detail-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--clr-text);
+}
+
+.trip-card__detail-value--time {
+  font-family: var(--font-mono);
+}
+
+.trip-card__detail-value--green  { color: var(--clr-green); }
+.trip-card__detail-value--amber  { color: var(--clr-amber); }
+.trip-card__detail-value--red    { color: var(--clr-red); }
+
+/* Occupancy bar */
+.trip-card__occ {
+  padding: 2px 20px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trip-card__occ-track {
+  flex: 1;
+  height: 3px;
+  background: var(--clr-elevated);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.trip-card__occ-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width .5s ease;
+}
+
+.trip-card__occ-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--clr-text-3);
+  white-space: nowrap;
+}
+
+/* CTA footer */
+.trip-card__footer {
+  padding: 0 20px 20px;
+}
+
+/* Sold-out overlay */
+.trip-card--soldout .trip-card__header,
+.trip-card--soldout .trip-card__details {
+  opacity: .55;
+}

@@ -1,0 +1,119 @@
+.home-hero {
+  padding: 56px 0 40px;
+  background: radial-gradient(ellipse 80% 50% at 50% -5%, rgba(245,166,35,.07) 0%, transparent 65%);
+  border-bottom: 1px solid var(--clr-border);
+  margin-bottom: 36px;
+}
+
+.home-hero__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--clr-amber);
+  margin-bottom: 12px;
+}
+
+.home-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.1;
+  color: var(--clr-text);
+  margin-bottom: 14px;
+}
+
+.home-hero__title span { color: var(--clr-amber); }
+
+.home-hero__sub {
+  font-size: 15px;
+  color: var(--clr-text-2);
+  max-width: 460px;
+  line-height: 1.6;
+}
+
+/* Filter bar */
+.filter-bar {
+  background: var(--clr-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--r-lg);
+  padding: 18px 20px;
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .filter-bar { grid-template-columns: 1fr 1fr; }
+  .filter-bar .filter-bar__btn { grid-column: 1 / -1; }
+}
+
+@media (max-width: 480px) {
+  .filter-bar { grid-template-columns: 1fr; }
+}
+
+/* Stats strip */
+.stats-strip {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.stats-strip__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stats-strip__val {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  color: var(--clr-amber);
+}
+
+.stats-strip__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--clr-text-3);
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+
+/* Trip grid section */
+.trips-section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+
+.trips-section__count {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--clr-text-3);
+}
+
+/* Poll indicator */
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--clr-teal);
+}
+
+.live-indicator__dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--clr-teal);
+  animation: pulse 1.8s ease infinite;
+}

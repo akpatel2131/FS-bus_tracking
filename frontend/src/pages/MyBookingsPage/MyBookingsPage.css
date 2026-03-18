@@ -1,0 +1,47 @@
+.my-bookings-page { padding-bottom: 60px; }
+
+.bookings-filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bookings-summary {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+.bookings-summary__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 18px;
+  background: var(--clr-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--r-md);
+  min-width: 110px;
+}
+
+.bookings-summary__val {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -.03em;
+}
+
+.bookings-summary__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--clr-text-3);
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}

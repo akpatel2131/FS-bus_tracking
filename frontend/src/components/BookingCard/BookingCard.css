@@ -1,0 +1,91 @@
+.booking-card {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.booking-card__left { flex: 1; min-width: 0; }
+
+.booking-card__route {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--clr-text);
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.booking-card__route span {
+  color: var(--clr-amber);
+  margin: 0 5px;
+}
+
+.booking-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.booking-card__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.booking-card__meta-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--clr-text-3);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.booking-card__meta-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--clr-text);
+}
+
+.booking-card__seats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.booking-card__seat-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--clr-elevated);
+  border: 1px solid var(--clr-border);
+  color: var(--clr-text-2);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.booking-card__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.booking-card__amount {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--clr-text);
+  letter-spacing: -.02em;
+}
+
+@media (max-width: 480px) {
+  .booking-card { flex-direction: column; }
+  .booking-card__right { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
+}
