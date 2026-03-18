@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { SeatMap } from '../../components/SeatMap/SeatMap';
 import { useAuth } from '../../context/AuthContext';
 import { useTrips } from '../../context/TripContext';
-import { usePolling } from '../../hooks/usePolling';
+import { usePolling } from '../../hooks/usePooling';
 import { ErrorBox, Spinner } from '../../Tools/common';
 import type { Booking } from '../../types';
 import './BookingPage.css';
